@@ -1,6 +1,8 @@
 package dev.gusramirez;
 
-import dev.gusramirez.illuminated.Karatsuba;
+import java.util.List;
+
+import dev.gusramirez.illuminated.Sorter;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,13 +16,11 @@ public class Main {
 
         // System.out.println(result);
 
-        var first = 5678;
-        var second = 1234;
+        var unordered = List.of(5, 4, 1, 8, 7, 2, 6, 3);
 
-        int result = Karatsuba.executeWithRecursion(first, second);
+        var ordered = Sorter.byMerge(unordered);
 
-        System.out.println(result);
-
+        System.out.println(ordered);
     }
 
 }
