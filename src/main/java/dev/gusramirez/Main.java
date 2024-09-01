@@ -1,21 +1,20 @@
 package dev.gusramirez;
 
-import dev.gusramirez.leetcode.LongestSubWoRepeatingChars;
+import dev.gusramirez.leetcode.Convert1DTo2DArray;
 
 public class Main {
     public static void main(String[] args) {
 
-        var one = "dvdf";
+        int[] original = { 1, 2, 3, 4 };
 
-        var r1 = LongestSubWoRepeatingChars.bySlidingWindowWithSet(one);
+        var result = Convert1DTo2DArray.execute(original, 3, 3);
 
-        var two = "ckilbkd";
-
-        var r2 = LongestSubWoRepeatingChars.bySlidingWindowWithSet(two);
-
-        System.out.println("Result 1: " + r1);
-        System.out.println("Result 2: " + r2);
-
+        for (var row : result) {
+            for (var col : row) {
+                System.out.print(col + " | ");
+            }
+            System.out.println("----------------");
+        }
     }
 
 }
